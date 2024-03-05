@@ -14,6 +14,8 @@ export default class ListSetDemo extends LightningElement {
     }
 
     get mySetArray() {
+        // To display, need to convert set to array (list). Also need to sort
+        // to mimic Apex (sorts set when displayed)
         return Array.from (Array.from (this.mySet).sort()).join(', ');
     }
 
@@ -51,8 +53,7 @@ export default class ListSetDemo extends LightningElement {
             this.item = null;
             this.userInput = null;
             // Force a re-render to update the view (this removes the user input from the field)
-            const inputField = this.template.querySelector('lightning-input');
-            inputField.value = null;
+            this.template.querySelector('lightning-input').value = null;
         }
     }
 
