@@ -1,18 +1,13 @@
-# Salesforce DX Project: Next Steps
+This is an interactive Lightning Web Component (LWC) designed for the RAD Women program to teach learners the difference between lists and sets.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+![image](https://github.com/neilhohmann/ApexListSetDemo/assets/129966678/e2ebf6e3-c80d-41bf-aab1-467239a782a2)
 
-## How Do You Plan to Deploy Your Changes?
+It demonstrates the following methods: add(), size(), get(), sort(), and clear().
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+![image](https://github.com/neilhohmann/ApexListSetDemo/assets/129966678/d08762f7-0cbd-4a84-9fa8-3ce28533c998)
 
-## Configure Your Salesforce DX Project
+Each button pressed in the footer expands the LWC to demonstrate more functionality (eg, add(), size()) or applies a method (eg, sort(), clear()).
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+![image](https://github.com/neilhohmann/ApexListSetDemo/assets/129966678/81dc3db9-3a34-42d7-a7eb-601f2401955e)
 
-## Read All About It
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
