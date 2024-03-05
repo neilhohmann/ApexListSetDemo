@@ -1,0 +1,77 @@
+<template>
+  <lightning-card title="Apex List & Set Demo !">
+      <lightning-button 
+          slot="actions"
+          label="Reset" 
+          onclick={reset}>
+      </lightning-button>
+      <div class="slds-var-m-around_large">
+          <P><b>List&lt;String&gt; myList = new List&lt;String&gt;();</b></P>
+          <p><b>Set&lt;String&gt; mySet  = new Set&lt;String&gt;();</b></p>
+      </div>
+      <template lwc:if={add}>
+          <div class="slds-var-m-around_large">
+              <lightning-input
+                  type="text"
+                  value={item}
+                  label="Enter an item and press <enter>"
+                  class="slds-var-m-vertical_x-small"
+                  onkeyup={itemHandler}>
+              </lightning-input>
+          </div>
+          <div class="slds-var-m-around_large">
+              <P><b>myList.add(</b>'{userInput}'<b>);</b></P>
+              <p><b>mySet.add(</b>'{userInput}'<b>);</b></P>
+              <p><b>myList: </b>({myArray})</p>
+              <p><b>mySet: </b>&#123;{mySetArray}&#125;</p>
+          </div>
+      </template>
+      <template lwc:if={size}>
+          <div class="slds-var-m-around_large">
+              <P><b>myList.size(): </b>{listSize}</P>
+              <P><b>mySet.size(): </b>{setSize}</P>
+          </div>
+      </template>
+      <template lwc:if={index}>
+          <div class="slds-var-m-around_large">
+              <P><b>myList[0]: </b>{indexZero}</P>
+              <P><b>myList[1]: </b>{indexOne}</P>
+              <P><b>myList.get(2): </b>{indexTwo}</P>
+              <P><b>Integer lastIndex = myList.size()-1;</b></P>
+              <P><b>myList[lastIndex]: </b>{indexLast}</P>
+          </div>
+      </template>
+      <div slot="footer" class="slds-var-m-around_medium">
+          <lightning-button 
+              class="slds-var-m-right_small"
+              variant="brand"
+              label="add()"
+              onclick={showAdd}>
+          </lightning-button>
+          <lightning-button 
+              class="slds-var-m-right_small"
+              variant="brand"
+              label="size()"
+              onclick={showSize}>
+          </lightning-button>
+          <lightning-button 
+              class="slds-var-m-right_small"
+              variant="brand"
+              label="[i] & get()"
+              onclick={showIndex}>
+          </lightning-button>
+          <lightning-button 
+              class="slds-var-m-right_small"
+              variant="brand"
+              label="sort()"
+              onclick={sortList}>
+          </lightning-button>
+          <lightning-button
+              variant="brand"
+              label="clear()"
+              onclick={clearListSet}>
+          </lightning-button>
+      </div>
+  </lightning-card>
+  
+</template>
